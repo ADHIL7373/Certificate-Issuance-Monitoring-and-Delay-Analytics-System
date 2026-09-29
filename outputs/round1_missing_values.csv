@@ -1,0 +1,17 @@
+column,missing_count,missing_percentage
+recent_backlog_growth_pct,531,1.06
+queue_length,528,1.06
+staff_availability_pct,528,1.06
+department_workload_index,527,1.05
+document_completeness_pct,502,1.0
+historical_stage_median_days,502,1.0
+verification_complexity,501,1.0
+application_age_days,501,1.0
+stage_age_days,501,1.0
+resubmission_count,500,1.0
+historical_service_median_days,500,1.0
+required_document_count,499,1.0
+pending_cases_department,499,1.0
+missing_document_count,498,1.0
+days_to_target,498,1.0
+submitted_document_count,498,1.0

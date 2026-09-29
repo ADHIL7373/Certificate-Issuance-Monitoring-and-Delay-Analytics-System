@@ -1,0 +1,12 @@
+check,count,percentage,interpretation
+Negative application_age_days,0,0.0,Potential data-quality issue
+Negative stage_age_days,0,0.0,Potential data-quality issue
+Negative days_to_target,11,0.02208835341365462,Operationally valid: target date has been crossed
+stage_age_days > application_age_days,63,0.12650602409638553,Potential logical inconsistency
+Submitted documents > required documents,0,0.0,Potential data-quality issue
+Missing documents > required documents,0,0.0,Potential data-quality issue
+Completeness outside 0-100,0,0.0,Potential data-quality issue
+Staff availability outside 0-100,0,0.0,Potential data-quality issue
+Department workload outside 0-100,0,0.0,Potential data-quality issue
+Verification complexity outside 1-5,0,0.0,Potential data-quality issue
+Invalid peak period flag,0,0.0,Potential data-quality issue

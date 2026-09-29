@@ -1,0 +1,4 @@
+current_stage,applications,delayed,delay_rate,median_stage_age,median_queue,median_workload,median_staff_availability,delay_rate_pct
+department review,25603,7358,0.2873881966956997,1.3,40.0,43.99,76.1,28.73881966956997
+document verification,23891,6207,0.25980494746975846,1.35,40.0,43.59,76.27,25.980494746975847
+initial scrutiny,306,18,0.058823529411764705,1.02,38.0,41.605000000000004,76.35499999999999,5.88235294117647

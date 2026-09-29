@@ -1,0 +1,9 @@
+column,unique_before,unique_after
+service_code,10,10
+certificate_type,20,10
+district,38,38
+taluk,152,152
+submission_channel,4,2
+submission_day_of_week,7,7
+current_stage,5,3
+target_tat_basis,3,3

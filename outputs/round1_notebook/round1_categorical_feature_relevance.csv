@@ -1,0 +1,8 @@
+feature,type,cramers_v,chi_square_p
+service_code,categorical,0.1771655407881241,0.0
+certificate_type,categorical,0.1771655407881241,0.0
+district,categorical,0.09986251021773095,8.439451818710203e-82
+target_tat_basis,categorical,0.09090105501803117,4.410171003562365e-90
+current_stage,categorical,0.04876804370931401,1.9097883907345138e-26
+submission_day_of_week,categorical,0.01694485955515657,0.026468906409435708
+submission_channel,categorical,0.0032069237464419065,0.47420481572644757

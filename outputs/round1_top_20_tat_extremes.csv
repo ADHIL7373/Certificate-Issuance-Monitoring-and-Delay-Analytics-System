@@ -1,0 +1,21 @@
+application_id,certificate_type,district,current_stage,actual_total_tat_days,target_tat_days,missed_target,actual_bottleneck_stage
+APP-1622-044124,legal heir certificate,tirunelveli,document verification,49.14,20,1,Department Review
+APP-1622-048576,legal heir certificate,tirupathur,department review,48.38,20,1,Department Review
+APP-1622-031100,first graduate certificate,kancheepuram,department review,40.84,15,1,Department Review
+APP-1622-013448,legal heir certificate,mayiladuthurai,department review,40.75,20,1,Department Review
+APP-1622-038270,legal heir certificate,dharmapuri,department review,38.93,20,1,Department Review
+APP-1622-047271,legal heir certificate,cuddalore,document verification,38.75,20,1,Approval
+APP-1622-036985,legal heir certificate,tiruppur,document verification,37.37,20,1,Department Review
+APP-1622-040590,legal heir certificate,kancheepuram,department review,36.63,20,1,Department Review
+APP-1622-031418,legal heir certificate,tiruchirappalli,department review,36.15,20,1,Department Review
+APP-1622-011612,legal heir certificate,thiruvarur,department review,35.83,20,1,Department Review
+APP-1622-032108,legal heir certificate,pudukottai,department review,35.51,20,1,Department Review
+APP-1622-033057,legal heir certificate,thiruvallur,department review,34.93,20,1,Department Review
+APP-1622-044759,inter caste marriage certificate,thiruvallur,department review,34.27,15,1,Department Review
+APP-1622-049773,income certificate,sivaganga,department review,34.07,15,1,Department Review
+APP-1622-018987,legal heir certificate,mayiladuthurai,document verification,33.72,20,1,Department Review
+APP-1622-010735,income certificate,thoothukudi,department review,33.51,15,1,Department Review
+APP-1622-039234,legal heir certificate,salem,document verification,33.38,20,1,Department Review
+APP-1622-031014,income certificate,tenkasi,document verification,32.63,15,1,Department Review
+APP-1622-000144,legal heir certificate,tenkasi,department review,32.44,20,1,Department Review
+APP-1622-005805,legal heir certificate,kallakurichi,document verification,32.28,20,1,Department Review

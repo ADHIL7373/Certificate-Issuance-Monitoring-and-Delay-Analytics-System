@@ -1,0 +1,6 @@
+column,lower_bound,upper_bound,invalid_values_converted_to_nan
+document_completeness_pct,0,100,0
+staff_availability_pct,0,100,0
+department_workload_index,0,100,0
+verification_complexity,1,5,0
+peak_period_flag,0,1,0

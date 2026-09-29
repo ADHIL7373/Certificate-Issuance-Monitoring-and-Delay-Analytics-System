@@ -1,0 +1,266 @@
+﻿==================================================
+ROUND 1 - DATASET INSPECTION
+==================================================
+Loading data from: D:\Datascience Hackathon\dataset\certificate_applications_raw_50000.csv
+
+--- 2. Dataset Shape & Basic Info ---
+Shape: (50000, 39)
+
+Column Names:
+['application_id', 'service_code', 'certificate_type', 'district', 'taluk', 'submission_channel', 'submission_date', 'submission_month', 'submission_day_of_week', 'peak_period_flag', 'current_stage', 'application_age_days', 'stage_age_days', 'days_to_target', 'target_tat_days', 'required_document_count', 'submitted_document_count', 'document_completeness_pct', 'missing_document_count', 'verification_complexity', 'resubmission_count', 'queue_length', 'pending_cases_department', 'department_workload_index', 'staff_availability_pct', 'recent_backlog_growth_pct', 'historical_stage_median_days', 'historical_service_median_days', 'actual_initial_scrutiny_days', 'actual_document_verification_days', 'actual_department_review_days', 'actual_approval_days', 'actual_certificate_issuance_days', 'actual_total_tat_days', 'actual_remaining_tat_days', 'missed_target', 'delay_overrun_days', 'actual_bottleneck_stage', 'target_tat_basis']
+
+Data Types:
+application_id                        object
+service_code                          object
+certificate_type                      object
+district                              object
+taluk                                 object
+submission_channel                    object
+submission_date                       object
+submission_month                       int64
+submission_day_of_week                object
+peak_period_flag                       int64
+current_stage                         object
+application_age_days                 float64
+stage_age_days                       float64
+days_to_target                       float64
+target_tat_days                        int64
+required_document_count              float64
+submitted_document_count             float64
+document_completeness_pct            float64
+missing_document_count               float64
+verification_complexity              float64
+resubmission_count                   float64
+queue_length                          object
+pending_cases_department             float64
+department_workload_index             object
+staff_availability_pct                object
+recent_backlog_growth_pct             object
+historical_stage_median_days         float64
+historical_service_median_days       float64
+actual_initial_scrutiny_days         float64
+actual_document_verification_days    float64
+actual_department_review_days        float64
+actual_approval_days                 float64
+actual_certificate_issuance_days     float64
+actual_total_tat_days                float64
+actual_remaining_tat_days            float64
+missed_target                          int64
+delay_overrun_days                   float64
+actual_bottleneck_stage               object
+target_tat_basis                      object
+dtype: object
+
+First 5 rows:
+    application_id service_code       certificate_type        district               taluk     submission_channel submission_date  submission_month submission_day_of_week  peak_period_flag          current_stage  application_age_days  stage_age_days  days_to_target  target_tat_days  required_document_count  submitted_document_count  document_completeness_pct  missing_document_count  verification_complexity  resubmission_count queue_length  pending_cases_department department_workload_index staff_availability_pct recent_backlog_growth_pct  historical_stage_median_days  historical_service_median_days  actual_initial_scrutiny_days  actual_document_verification_days  actual_department_review_days  actual_approval_days  actual_certificate_issuance_days  actual_total_tat_days  actual_remaining_tat_days  missed_target  delay_overrun_days actual_bottleneck_stage                                   target_tat_basis
+0  APP-1622-020496      REV-102   Nativity Certificate    Virudhunagar    Virudhunagar-T03         e-Sevai Centre      2024-05-13                 5                 Monday                 1      Department Review                  3.21            1.02            3.79                7                      5.0                       4.0                      80.00                     1.0                      3.0                 0.0           61                      78.0                     47.08                  62.63                      3.14                          1.53                            6.18                          0.54                               1.64                           2.52                  1.80                              0.28                   6.79                       3.59              0                0.00       Department Review        Official TNeGA listed service time: 07 days
+1  APP-1622-046294      REV-109      Widow Certificate  Tiruvannamalai  Tiruvannamalai-T01  Online Citizen Portal      2025-02-01                 2               Saturday                 0  Document Verification                  2.49            1.31           12.51               15                      6.0                       5.0                      83.33                     1.0                      3.2                 0.0           27                      45.0                     25.96                  79.63                     -1.91                          2.18                           11.50                          1.18                               2.62                           4.87                  2.39                              0.45                  11.51                       9.02              0                0.00       Department Review  Prototype assumption - TNeGA currently shows '...
+2  APP-1622-020461      REV-120  Unmarried Certificate      Perambalur      Perambalur-T02         e-Sevai Centre      2024-08-29                 8               Thursday                 1     department review                   4.95            0.87           10.05               15                      5.0                       5.0                     100.00                     0.0                      2.5                 0.0           51                      68.0                     39.76                  87.89                      12.4                          3.38                           11.92                          1.25                               2.83                           4.55                  3.49                              0.41                  12.53                       7.58              0                0.00       Department Review        Official TNeGA listed service time: 15 days
+3  APP-1622-006848      REV-102   Nativity Certificate  Ramanathapuram  Ramanathapuram-T04  Online Citizen Portal      2024-10-31                10               Thursday                 0      Department Review                  3.79            0.97            3.21                7                      5.0                       3.0                      60.00                     2.0                      3.0                 2.0           38                      40.0                     49.29                  89.56                      2.98                          1.47                            5.90                          0.67                               2.15                           2.66                  1.98                              0.19                   7.65                       3.86              1                0.65       Department Review        Official TNeGA listed service time: 07 days
+4  APP-1622-035235      REV-102   Nativity Certificate      Viluppuram      Viluppuram-T04  Online Citizen Portal      2024-07-06                 7               Saturday                 1      Department Review                  3.11            1.28            3.89                7                      5.0                       4.0                      80.00                     1.0                      3.0                 0.0           38                      75.0                     48.52                  79.67                      6.19                          1.59                            6.00                          0.60                               1.23                           3.12                  1.21                              0.30                   6.46                       3.35              0                0.00       Department Review        Official TNeGA listed service time: 07 days
+
+Last 5 rows:
+        application_id service_code        certificate_type        district               taluk     submission_channel submission_date  submission_month submission_day_of_week  peak_period_flag          current_stage  application_age_days  stage_age_days  days_to_target  target_tat_days  required_document_count  submitted_document_count  document_completeness_pct  missing_document_count  verification_complexity  resubmission_count queue_length  pending_cases_department department_workload_index staff_availability_pct recent_backlog_growth_pct  historical_stage_median_days  historical_service_median_days  actual_initial_scrutiny_days  actual_document_verification_days  actual_department_review_days  actual_approval_days  actual_certificate_issuance_days  actual_total_tat_days  actual_remaining_tat_days  missed_target  delay_overrun_days actual_bottleneck_stage                                   target_tat_basis
+49995  APP-1622-047320      REV-115         OBC Certificate  Tiruvannamalai  Tiruvannamalai-T04         e-Sevai Centre      2024-11-09                11               Saturday                 1      Department Review                  3.38            0.55            6.62               10                      6.0                       5.0                      83.33                     1.0                      3.2                 0.0           37                      71.0                     55.98                  73.97                      9.37                          1.86                            8.08                          0.99                               1.84                           4.07                  2.38                              0.40                   9.69                       6.31              0                0.00       Department Review  Prototype assumption - TNeGA currently shows '...
+49996  APP-1622-037723      REV-116   Residence Certificate      Coimbatore      Coimbatore-T03  Online Citizen Portal      2025-08-03                 8                 Sunday                 1      Department Review                  3.96            0.46            6.04               10                      6.0                       5.0                      83.33                     1.0                      2.7                 1.0           50                      66.0                     35.28                  70.23                      6.92                          1.82                            8.89                          0.70                               2.81                           4.23                  2.59                              0.29                  10.62                       6.66              1                0.62       Department Review  Prototype assumption - TNeGA currently shows '...
+49997  APP-1622-031726      REV-115         OBC Certificate        Namakkal        Namakkal-T04  Online Citizen Portal      2024-09-24                 9                Tuesday                 0  Document Verification                  1.04            0.23            8.96               10                      6.0                       5.0                      83.33                     1.0                      3.2                 0.0           39                      54.0                     28.39                  89.59                      3.84                          1.45                            7.83                          0.81                               2.35                           2.90                  1.55                              0.30                   7.90                       6.86              0                0.00       Department Review  Prototype assumption - TNeGA currently shows '...
+49998  APP-1622-045511      REV-101   Community Certificate         Madurai         Madurai-T04         e-Sevai Centre      2025-07-01                 7                Tuesday                 1  Document Verification                  2.55            1.75            7.45               10                      5.0                       5.0                     100.00                     0.0                      3.0                 0.0           33                      86.0                     30.43                  75.27                      7.72                          1.10                            8.47                          0.80                               1.83                           2.02                  1.83                              0.37                   6.85                       4.31              0                0.00       Department Review  Prototype assumption - TNeGA currently shows '...
+49999  APP-1622-011546      REV-114  Legal Heir Certificate      Coimbatore      Coimbatore-T01         e-Sevai Centre      2024-01-06                 1               Saturday                 0      Department Review                  6.54            0.76           13.46               20                      9.0                       9.0                     100.00                     0.0                      4.5                 0.0           28                      61.0                     33.61                  84.99                     -5.58                          3.79                           16.03                          1.57                               4.21                           5.99                  4.18                              0.64                  16.58                      10.04              0                0.00       Department Review  Prototype assumption - TNeGA currently shows '...
+
+--- 3. Missing Values & Duplicates ---
+
+Missing Values (columns with missing values):
+                                Missing Values  Percentage
+application_age_days                       501       1.002
+stage_age_days                             501       1.002
+days_to_target                             498       0.996
+required_document_count                    499       0.998
+submitted_document_count                   498       0.996
+document_completeness_pct                  502       1.004
+missing_document_count                     498       0.996
+verification_complexity                    501       1.002
+resubmission_count                         500       1.000
+queue_length                               528       1.056
+pending_cases_department                   499       0.998
+department_workload_index                  527       1.054
+staff_availability_pct                     528       1.056
+recent_backlog_growth_pct                  531       1.062
+historical_stage_median_days               502       1.004
+historical_service_median_days             500       1.000
+Total missing values across dataset: 8113
+
+Exact duplicate rows: 200
+Duplicate application IDs: 200
+
+--- 4. Distributions ---
+
+missed_target distribution:
+missed_target
+0    36361
+1    13639
+Name: count, dtype: int64
+
+certificate_type distribution:
+certificate_type
+Community Certificate               9310
+Income Certificate                  8941
+Nativity Certificate                8130
+Legal Heir Certificate              3980
+OBC Certificate                     3968
+Residence Certificate               3964
+Inter Caste Marriage Certificate    3066
+Unmarried Certificate               2986
+Widow Certificate                   2901
+First Graduate Certificate          2455
+ community certificate                64
+income certificate                    57
+NATIVITY CERTIFICATE                  43
+residence certificate                 32
+OBC certificate                       22
+Legal heir certificate                18
+widow certificate                     17
+First graduate certificate            16
+unmarried certificate                 15
+Inter Caste Marriage certificate      15
+Name: count, dtype: int64
+
+current_stage distribution:
+current_stage
+Department Review        25542
+Document Verification    23853
+Initial Scrutiny           306
+department review          161
+DOCUMENT VERIFICATION      138
+Name: count, dtype: int64
+
+district distribution:
+district
+Mayiladuthurai     1393
+Kancheepuram       1373
+Erode              1367
+Cuddalore          1361
+Tiruvannamalai     1360
+Tiruppur           1360
+Namakkal           1354
+Krishnagiri        1347
+Virudhunagar       1344
+Pudukottai         1339
+Theni              1337
+Nagapattinam       1336
+Thoothukudi        1335
+Tenkasi            1331
+Ranipet            1330
+Thiruvallur        1329
+The Nilgiris       1325
+Karur              1325
+Thiruvarur         1323
+Chengalpattu       1321
+Coimbatore         1318
+Dindigul           1318
+Ariyalur           1306
+Tirupathur         1306
+Thanjavur          1306
+Madurai            1301
+Tirunelveli        1296
+Viluppuram         1295
+Tiruchirappalli    1294
+Salem              1291
+Perambalur         1287
+Chennai            1283
+Sivaganga          1275
+Kanyakumari        1262
+Kallakurichi       1260
+Ramanathapuram     1258
+Dharmapuri         1237
+Vellore            1217
+Name: count, dtype: int64
+
+--- 5. Numerical Descriptive Statistics ---
+                                     count       mean        std    min    25%    50%      75%     max
+submission_month                   50000.0   5.899600   3.409257   1.00   3.00   5.00    9.000   12.00
+peak_period_flag                   50000.0   0.464900   0.498771   0.00   0.00   0.00    1.000    1.00
+application_age_days               49499.0   4.060385   2.349353   0.46   2.28   3.57    5.370   25.15
+stage_age_days                     49499.0   1.546850   1.124098   0.05   0.69   1.32    2.145   11.17
+days_to_target                     49502.0   8.295879   3.086043  -5.15   5.90   7.92   10.440   18.60
+target_tat_days                    50000.0  12.356120   3.761731   7.00  10.00  10.00   15.000   20.00
+required_document_count            49501.0   6.567443   1.794853   5.00   5.00   6.00    9.000   10.00
+submitted_document_count           49502.0   5.857137   1.740653   1.00   5.00   5.00    7.000   10.00
+document_completeness_pct          49498.0  89.404487  12.366230  16.67  80.00  90.00  100.000  100.00
+missing_document_count             49502.0   0.708638   0.833685   0.00   0.00   1.00    1.000    7.00
+verification_complexity            49499.0   3.396380   0.619950   2.50   3.00   3.20    4.200    4.50
+resubmission_count                 49500.0   0.205172   0.479783   0.00   0.00   0.00    0.000    4.00
+pending_cases_department           49501.0  61.964142  12.760998   5.00  53.00  62.00   70.000  112.00
+historical_stage_median_days       49498.0   2.081323   0.757699   0.39   1.44   2.00    2.680    4.93
+historical_service_median_days     49500.0  10.128895   3.149054   4.21   7.87   9.12   12.450   20.25
+actual_initial_scrutiny_days       50000.0   1.023278   0.360273   0.32   0.74   0.98    1.270    2.85
+actual_document_verification_days  50000.0   2.935218   1.197168   0.83   2.01   2.74    3.660   12.84
+actual_department_review_days      50000.0   4.536842   1.914360   1.21   3.06   4.20    5.660   24.81
+actual_approval_days               50000.0   2.640273   1.043389   0.71   1.83   2.48    3.290   12.95
+actual_certificate_issuance_days   50000.0   0.411890   0.144177   0.13   0.30   0.39    0.510    1.30
+actual_total_tat_days              50000.0  11.547504   4.350237   3.98   8.11  10.92   14.380   49.14
+actual_remaining_tat_days          50000.0   7.488071   3.329598   1.77   4.97   6.85    9.430   42.05
+missed_target                      50000.0   0.272780   0.445393   0.00   0.00   0.00    1.000    1.00
+delay_overrun_days                 50000.0   0.450819   1.235222   0.00   0.00   0.00    0.140   29.14
+
+--- 6. Categorical Statistics ---
+                           count unique                                                top   freq
+application_id             50000  49800                                    APP-1622-017055      2
+service_code               50000     10                                            REV-101   9374
+certificate_type           50000     20                              Community Certificate   9310
+district                   50000     38                                     Mayiladuthurai   1393
+taluk                      50000    152                                       Tiruppur-T03    380
+submission_channel         50000      4                                     e-Sevai Centre  28930
+submission_date            50000   1063                                         2026-06-13     83
+submission_day_of_week     50000      7                                            Tuesday   7288
+current_stage              50000      5                                  Department Review  25542
+queue_length               49472     59                                                 35   2301
+department_workload_index  49473   5133                                              38.15     34
+staff_availability_pct     49472   5026                                              100.0    506
+recent_backlog_growth_pct  49469   3435                                              -10.0    501
+actual_bottleneck_stage    50000      3                                  Department Review  48615
+target_tat_basis           50000      3  Prototype assumption - TNeGA currently shows '...  26747
+
+Categorical Unique Counts:
+application_id: 49800 unique values
+service_code: 10 unique values
+certificate_type: 20 unique values
+district: 38 unique values
+taluk: 152 unique values
+submission_channel: 4 unique values
+submission_date: 1063 unique values
+submission_day_of_week: 7 unique values
+current_stage: 5 unique values
+queue_length: 59 unique values
+department_workload_index: 5133 unique values
+staff_availability_pct: 5026 unique values
+recent_backlog_growth_pct: 3435 unique values
+actual_bottleneck_stage: 3 unique values
+target_tat_basis: 3 unique values
+
+--- 7. Target Columns Check ---
+missed_target: FOUND
+actual_total_tat_days: FOUND
+actual_remaining_tat_days: FOUND
+delay_overrun_days: FOUND
+
+--- 8. Schema Dictionary Verification ---
+All expected columns from schema are present in the dataset.
+No extra columns found outside the schema.
+
+--- 9. Leakage Inventory ---
+Potential leakage/target columns present in raw data (must be excluded from model features):
+- actual_initial_scrutiny_days
+- actual_document_verification_days
+- actual_department_review_days
+- actual_approval_days
+- actual_certificate_issuance_days
+- actual_total_tat_days
+- actual_remaining_tat_days
+- missed_target
+- delay_overrun_days
+- actual_bottleneck_stage
+- application_id
+
+==================================================
+INSPECTION COMPLETE. NO MODIFICATIONS MADE.
+==================================================

@@ -1,0 +1,9 @@
+metric,value
+raw_rows,50000
+raw_columns,39
+exact_duplicate_rows,200
+duplicate_application_ids,200
+unique_application_ids,49800
+total_missing_cells,8113
+invalid_submission_dates,0
+leakage_columns_found,11

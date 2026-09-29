@@ -1,0 +1,9 @@
+column,raw_unique_values,normalized_unique_values,possible_inconsistency
+service_code,10,10,False
+certificate_type,20,10,True
+district,38,38,False
+taluk,152,152,False
+submission_channel,4,2,True
+submission_day_of_week,7,7,False
+current_stage,5,3,True
+target_tat_basis,3,3,False
